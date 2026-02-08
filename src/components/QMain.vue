@@ -11,7 +11,9 @@ const author = ref('H. Jackson Brown Jr., P.S. ')
   <div class="quote-container">
     <div class="quote-section">{{ quote }}</div>
     <div class="author">{{ author }}</div>
-    <div class="btns"></div>
+    <div class="btns">
+      <button>New Quote</button>
+    </div>
   </div>
 </template>
 
@@ -36,13 +38,26 @@ const author = ref('H. Jackson Brown Jr., P.S. ')
 }
 
 .author {
-  display: flex;
-  justify-content: flex-end;
+  /* display: flex; */
+  justify-self: flex-end;
   margin: 1rem 0;
   font-size: 1.3rem;
 }
 
 .author::before {
   content: '--';
+}
+
+.btns {
+  justify-self: flex-end;
+}
+
+button {
+  padding: 12px 16px;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 </style>
