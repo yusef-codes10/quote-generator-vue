@@ -1,10 +1,13 @@
 <script setup>
 import { ref } from 'vue'
 
-const quote = ref(
-  " Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
-)
-const author = ref('H. Jackson Brown Jr., P.S. ')
+// const quote = ref(
+//   " Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
+// )
+// const author = ref('H. Jackson Brown Jr., P.S. ')
+
+const quote = ref('')
+const author = ref('')
 
 const quotes = ref([
   {
@@ -62,14 +65,15 @@ const quotes = ref([
 const generateQuote = () => {
   const randomIndex = Math.floor(Math.random() * quotes.value.length)
   const randomQuote = quotes.value[randomIndex]
-  return randomQuote
+  quote.value = randomQuote.quote
+  author.value = randomQuote.author
 }
 </script>
 
 <template>
   <div class="quote-container">
-    <div class="quote-section">{{ generateQuote().quote }}</div>
-    <div class="author">{{ generateQuote().author }}</div>
+    <div class="quote-section">{{ quote }}</div>
+    <div class="author">{{ author }}</div>
     <div class="btns">
       <button @click="generateQuote">New Quote</button>
     </div>
