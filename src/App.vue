@@ -12,5 +12,6 @@ import QHeader from './components/QHeader.vue'
 .container {
   height: 100dvh;
   background-color: var(--bg-color);
+  color: var(--font-color);
 }
 </style>
