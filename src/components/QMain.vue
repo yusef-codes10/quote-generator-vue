@@ -58,14 +58,20 @@ const quotes = ref([
     author: 'Vladimir Lenin',
   },
 ])
+
+const generateQuote = () => {
+  const randomIndex = Math.floor(Math.random() * quotes.value.length)
+  const randomQuote = quotes.value[randomIndex]
+  return randomQuote
+}
 </script>
 
 <template>
   <div class="quote-container">
-    <div class="quote-section">{{ quote }}</div>
-    <div class="author">{{ author }}</div>
+    <div class="quote-section">{{ generateQuote().quote }}</div>
+    <div class="author">{{ generateQuote().author }}</div>
     <div class="btns">
-      <button>New Quote</button>
+      <button @click="generateQuote">New Quote</button>
     </div>
   </div>
 </template>
