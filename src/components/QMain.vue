@@ -116,7 +116,13 @@ const generateQuote = () => {
 }
 
 .quote-section::before {
-  content: '*';
+  content: '“ ';
+  font-weight: 700;
+}
+
+.quote-section::after {
+  content: '”';
+  font-weight: 700;
 }
 
 .author {
@@ -141,5 +147,6 @@ button {
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
+  font-size: 1.4rem;
 }
 </style>
