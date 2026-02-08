@@ -17,14 +17,32 @@ const author = ref('H. Jackson Brown Jr., P.S. ')
 
 <style scoped>
 .quote-container {
-  width: 700px;
+  width: min(700px, 80%);
   height: auto;
   background-color: var(--font-color);
   color: var(--bg-color);
-  padding: 12px 16px;
+  padding: 1rem 2rem;
+  border: 1px solid #000;
+  border-radius: 2rem;
 }
 
 .quote-section {
   font-size: clamp(2rem, 2vw + 0.25rem, 3.1rem);
+  font-weight: 500;
+}
+
+.quote-section::before {
+  content: '*';
+}
+
+.author {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0;
+  font-size: 1.3rem;
+}
+
+.author::before {
+  content: '--';
 }
 </style>
