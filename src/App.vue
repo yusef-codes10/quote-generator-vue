@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+import QHeader from './components/QHeader.vue'
+</script>
 
 <template>
-  <h1>Quote generator</h1>
+  <QHeader />
 </template>
 
 <style scoped></style>
