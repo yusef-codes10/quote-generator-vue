@@ -3,7 +3,14 @@ import QHeader from './components/QHeader.vue'
 </script>
 
 <template>
-  <QHeader />
+  <div class="container">
+    <QHeader />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+  height: 100dvh;
+  background-color: var(--bg-color);
+}
+</style>
