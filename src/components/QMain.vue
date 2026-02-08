@@ -5,6 +5,59 @@ const quote = ref(
   " Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
 )
 const author = ref('H. Jackson Brown Jr., P.S. ')
+
+const quotes = ref([
+  {
+    index: 1,
+    quote: 'Imagination is more important than knowledge.',
+    author: 'Albert Einstein',
+  },
+  {
+    index: 2,
+    quote: 'Science is a way of thinking much more than it is a body of knowledge.',
+    author: 'Carl Sagan',
+  },
+  {
+    index: 3,
+    quote: 'If you want to find the secrets of the universe, think in terms of energy.',
+    author: 'Nikola Tesla',
+  },
+  {
+    index: 4,
+    quote: 'What we know is a drop, what we don’t know is an ocean.',
+    author: 'Isaac Newton',
+  },
+  {
+    index: 5,
+    quote: 'In matters of conscience, the law of the majority has no place.',
+    author: 'Mahatma Gandhi',
+  },
+  {
+    index: 6,
+    quote: 'Those who deny freedom to others deserve it not for themselves.',
+    author: 'Abraham Lincoln',
+  },
+  {
+    index: 7,
+    quote: 'Power tends to corrupt, and absolute power corrupts absolutely.',
+    author: 'Lord Acton',
+  },
+  {
+    index: 8,
+    quote: 'The good thing about science is that it’s true whether or not you believe in it.',
+    author: 'Neil deGrasse Tyson',
+  },
+  {
+    index: 9,
+    quote: 'Man is condemned to be free.',
+    author: 'Jean-Paul Sartre',
+  },
+  {
+    index: 10,
+    quote: 'A lie told often enough becomes the truth.',
+    author: 'Vladimir Lenin',
+  },
+])
 </script>
 
 <template>
