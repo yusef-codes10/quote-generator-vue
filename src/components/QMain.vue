@@ -15,4 +15,16 @@ const author = ref('H. Jackson Brown Jr., P.S. ')
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.quote-container {
+  width: 700px;
+  height: auto;
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  padding: 12px 16px;
+}
+
+.quote-section {
+  font-size: clamp(2rem, 2vw + 0.25rem, 3.1rem);
+}
+</style>
