@@ -1,10 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 
-const quote = ref(
-  " Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
-)
-const author = ref('H. Jackson Brown Jr., P.S. ')
+const quote = ref("If you tell the truth, you don't have to remember anything.")
+const author = ref('Mark Twain')
 
 // const quote = ref('')
 // const author = ref('')
@@ -60,6 +58,23 @@ const quotes = ref([
     quote: 'A lie told often enough becomes the truth.',
     author: 'Vladimir Lenin',
   },
+  {
+    index: 11,
+    quote: 'Be the change that you wish to see in the world.',
+    author: 'Mahatma Gandhi',
+  },
+  {
+    index: 12,
+    quote:
+      "If you want to know what a man's like, take a good look at how he treats his inferiors, not his equals.",
+    author: 'J.K. Rowling',
+  },
+  {
+    index: 13,
+    quote:
+      "Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.",
+    author: 'Marilyn Monroe',
+  },
 ])
 
 const generateQuote = () => {
@@ -83,17 +98,21 @@ const generateQuote = () => {
 <style scoped>
 .quote-container {
   width: min(700px, 80%);
-  height: auto;
+  min-height: 300px;
   background-color: var(--font-color);
   color: var(--bg-color);
   padding: 1rem 2rem;
   border: 1px solid #000;
   border-radius: 2rem;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .quote-section {
   font-size: clamp(2rem, 2vw + 0.25rem, 3.1rem);
   font-weight: 500;
+  flex: 1;
 }
 
 .quote-section::before {
@@ -102,7 +121,7 @@ const generateQuote = () => {
 
 .author {
   /* display: flex; */
-  justify-self: flex-end;
+  align-self: flex-end;
   margin: 1rem 0;
   font-size: 1.3rem;
 }
@@ -112,7 +131,7 @@ const generateQuote = () => {
 }
 
 .btns {
-  justify-self: flex-end;
+  align-self: flex-end;
 }
 
 button {
