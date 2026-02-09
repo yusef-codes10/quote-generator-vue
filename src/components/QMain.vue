@@ -76,7 +76,7 @@ const author = ref('Mark Twain')
 //     author: 'Marilyn Monroe',
 //   },
 // ])
-const quotes = ref([])
+// const quotes = ref([])
 
 // const generateQuote = () => {
 //   const randomIndex = Math.floor(Math.random() * quotes.value.length)
@@ -100,8 +100,8 @@ const generateQuote =
       const data = await response.json()
 
       // since there's one value no array, no map
-      quotes.value[0].text = data[0].quote
-      quotes.value[0].author = data[0].author
+      quote.value = data[0].quote
+      author.value = data[0].author
     } catch (error) {
       console.log(error)
     }
