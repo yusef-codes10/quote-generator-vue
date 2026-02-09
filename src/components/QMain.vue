@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
 const quote = ref("If you tell the truth, you don't have to remember anything.")
 const author = ref('Mark Twain')
@@ -85,9 +85,9 @@ const quotes = ref([])
 //   author.value = randomQuote.author
 // }
 
-const generateQuote = () => {
+const generateQuote =
   // fetch therandom quotes
-  onMounted(async () => {
+  async () => {
     try {
       // fetch
       const response = await fetch('https://api.api-ninjas.com/v1/quotes', {
@@ -99,16 +99,13 @@ const generateQuote = () => {
       // turn into json
       const data = await response.json()
 
-      // map the data
-      quotes.value = data.map((quote) => ({
-        text: quote.quote,
-        author: quote.author,
-      }))
+      // since there's one value no array, no map
+      quotes.value[0].text = data[0].quote
+      quotes.value[0].author = data[0].author
     } catch (error) {
       console.log(error)
     }
-  })
-}
+  }
 </script>
 
 <template>
