@@ -87,7 +87,11 @@ const generateQuote = () => {
 onMounted(async () => {
   try {
     // fetch
-    const response = await fetch('https://api.api-ninjas.com/v1/quotes')
+    const response = await fetch('https://api.api-ninjas.com/v1/quotes', {
+      headers: {
+        'X-Api-Key': import.meta.env.VITE_API_NINJAS_KEY,
+      },
+    })
   } catch (error) {
     console.log(error)
   }
