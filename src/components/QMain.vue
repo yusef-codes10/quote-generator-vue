@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const quote = ref("If you tell the truth, you don't have to remember anything.")
 const author = ref('Mark Twain')
@@ -83,6 +83,15 @@ const generateQuote = () => {
   quote.value = randomQuote.quote
   author.value = randomQuote.author
 }
+// fetch therandom quotes
+onMounted(async () => {
+  try {
+    // fetch
+    const response = await fetch('https://api.api-ninjas.com/v1/quotes')
+  } catch (error) {
+    console.log(error)
+  }
+})
 </script>
 
 <template>
