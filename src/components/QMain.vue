@@ -94,7 +94,13 @@ onMounted(async () => {
     })
 
     // turn into json
-    const data = response.json()
+    const data = await response.json()
+
+    // map the data
+    quotes.value = data.map((quote) => ({
+      text: quote.quote,
+      author: quote.author,
+    }))
   } catch (error) {
     console.log(error)
   }
