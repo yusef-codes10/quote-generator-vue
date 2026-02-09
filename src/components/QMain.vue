@@ -122,6 +122,8 @@ const generateQuote =
 .quote-container {
   width: min(700px, 80%);
   min-height: 300px;
+  max-height: 300px;
+  /* overflow: scroll; */
   background-color: var(--font-color);
   color: var(--bg-color);
   padding: 1rem 2rem;
@@ -133,8 +135,9 @@ const generateQuote =
 }
 
 .quote-section {
-  font-size: clamp(2rem, 2vw + 0.25rem, 3.1rem);
+  font-size: clamp(1.2rem, 2vw + 0.25rem, 3.1rem);
   font-weight: 500;
+  overflow-y: scroll;
   flex: 1;
 }
 
