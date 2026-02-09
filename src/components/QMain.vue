@@ -92,6 +92,9 @@ onMounted(async () => {
         'X-Api-Key': import.meta.env.VITE_API_NINJAS_KEY,
       },
     })
+
+    // turn into json
+    const data = response.json()
   } catch (error) {
     console.log(error)
   }
